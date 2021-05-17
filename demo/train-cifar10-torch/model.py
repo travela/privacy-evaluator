@@ -66,3 +66,23 @@ class ResNet18(nn.Module):
     def forward(self, x):
         out = self.resnet(x)
         return out
+
+
+class NeuralNet(nn.Module):
+    def __init__(self, num_classes: int = 2, dropout: float = 0):
+        super(NeuralNet, self).__init__()
+        self.flatten = nn.Flatten()
+        self.fc = nn.Sequential(
+            nn.Linear(32 * 32, 128),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(64, num_classes),
+        )
+    
+    def forward(self, x):
+        x = self.flatten(x)
+        out = self.fc(x)
+        return out
