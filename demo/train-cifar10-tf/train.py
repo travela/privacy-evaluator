@@ -3,6 +3,7 @@ import numpy as np
 from typing import Tuple, Dict
 from model import ResNet50
 from metric import cross_entropy_loss, accuracy
+import os
 
 
 def trainer(
@@ -68,7 +69,7 @@ def trainer(
         epoch_acc = sum(accuracies) / len(accuracies)
         if epoch_acc > best_acc:
             best_acc = epoch_acc
-            model_name = "tf_pt_resnet50_class_0_{}_class_1_{}.ckpt".format(
+            model_name = "tf_pt_resnet50_class_0_{}_class_1_{}".format(
                 size_dict[0], size_dict[1]
             )
             model.save(os.path.join("../../", model_name))
