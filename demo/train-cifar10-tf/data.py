@@ -1,6 +1,6 @@
 import numpy as np
 from tensorflow.keras.datasets import cifar10
-from typing import Tuple, Optional, Dict
+from typing import Tuple, Optional
 
 
 def dataset_downloader(dataset_name: str = "CIFAR10") -> Tuple[np.ndarray, np.ndarray]:
