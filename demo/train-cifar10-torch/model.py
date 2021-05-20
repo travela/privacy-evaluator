@@ -81,7 +81,7 @@ class NeuralNet(nn.Module):
             nn.Dropout(dropout),
             nn.Linear(64, num_classes),
         )
-    
+
     def forward(self, x):
         x = self.flatten(x)
         out = self.fc(x)
