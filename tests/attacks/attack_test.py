@@ -5,7 +5,7 @@ from privacy_evaluator.models.torch.dcti.dcti import load_dcti
 from privacy_evaluator.datasets.cifar10 import CIFAR10
 from privacy_evaluator.classifiers.classifier import Classifier
 
-
+# Run this thing
 def test_attack():
     x_train, y_train, x_test, y_test = CIFAR10.numpy()
     target_model = Classifier(
