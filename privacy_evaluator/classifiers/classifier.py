@@ -22,12 +22,17 @@ class Classifier:
         :param input_shape: Input shape of a data point of the classifier.
         """
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.art_classifier = self._to_art_classifier(
             classifier, loss, nb_classes, input_shape
 =======
         self._art_classifier = self._init_art_classifier(
             classifier, nb_classes, input_shape
 >>>>>>> Feat (membership-inference-attack): Restructure codebase for membership inference attack on point basis
+=======
+        self.art_classifier = self._to_art_classifier(
+            classifier, loss, nb_classes, input_shape
+>>>>>>> Feat (metrics): Add membership privacy risk score
         )
 
     def predict(self, x: np.ndarray):
