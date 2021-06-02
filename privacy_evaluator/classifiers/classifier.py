@@ -41,17 +41,17 @@ class Classifier:
         :param x: Data which labels should be predicted for.
         :return: Predicted labels.
         """
-        return self._art_classifier.predict(x)
+        return self.art_classifier.predict(x)
 
     def to_art_classifier(self):
         """Converts the classifier to an ART classifier.
 
         :return: Converted ART classifier.
         """
-        return self._art_classifier
+        return self.art_classifier
 
     @staticmethod
-    def _init_art_classifier(
+    def _to_art_classifier(
         classifier: Union[tf.keras.Model, torch.nn.Module],
         loss: Union[tf.keras.losses.Loss, torch.nn.modules.loss._Loss],
         nb_classes: int,
@@ -78,7 +78,7 @@ class Classifier:
                 model=classifier, nb_classes=nb_classes, input_shape=input_shape,
 =======
                 model=classifier,
-                loss=loss,
+                loss_object=loss,
                 nb_classes=nb_classes,
                 input_shape=input_shape,
 >>>>>>> Fix importing; add loss function to `Classifier` class; add notebook for privacy risk score. #78
