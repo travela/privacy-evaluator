@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Team2sprint2 (#102)
 name: Styling with black
 
 on:
@@ -25,6 +28,7 @@ jobs:
 
       - name: Check styling with black
         run: black --check .
+<<<<<<< HEAD
 =======
 name: Styling with black
 
@@ -53,3 +57,5 @@ jobs:
       - name: Check styling with black
         run: black --check .
 >>>>>>> Feat (metrics): Add statistics for K Points
+=======
+>>>>>>> Team2sprint2 (#102)

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Team2sprint2 (#102)
 name: Testing with pytest 
 
 on:
@@ -31,6 +34,7 @@ jobs:
       - name: Test with pytest
         run: pytest
 
+<<<<<<< HEAD
 =======
 name: Testing with pytest 
 
@@ -65,3 +69,5 @@ jobs:
         run: pytest
 
 >>>>>>> Feat (metrics): Add statistics for K Points
+=======
+>>>>>>> Team2sprint2 (#102)
