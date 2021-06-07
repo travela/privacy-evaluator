@@ -265,7 +265,7 @@ class PropertyInferenceAttack(Attack):
 
             # change pytorch classifier to art classifier
             art_model_neg_property = Classifier._to_art_classifier(
-                model_neg_property, num_classes, input_shape
+                model_neg_property, None, num_classes, input_shape
             )
 
             shadow_classifiers_neg_property.append(art_model_neg_property)
@@ -302,10 +302,14 @@ class PropertyInferenceAttack(Attack):
             # Store the remaining parameters in a concatenated 1D numPy-array
             model_parameters = np.concatenate(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 [el.cpu().detach().numpy().flatten() for el in model_parameters]
 =======
                 [el.detach().numpy().flatten() for el in model_parameters]
 >>>>>>> Team2sprint2 (#102)
+=======
+                [el.detach().cpu().numpy().flatten() for el in model_parameters]
+>>>>>>> Fix merge issues and failing tests.
             ).flatten()
             return model_parameters
 
