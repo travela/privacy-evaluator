@@ -50,9 +50,7 @@ def test_property_inference_attack():
 >>>>>>> Team2sprint2 (#102)
 
     # change pytorch classifier to art classifier
-    target_model = Classifier(
-        model, None, num_classes, input_shape
-    )
+    target_model = Classifier(model, None, num_classes, input_shape)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
