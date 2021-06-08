@@ -54,6 +54,7 @@ def test_property_inference_attack():
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     attack = PropertyInferenceAttack(target_model, train_dataset)
 =======
     attack = PropertyInferenceAttack(target_model)
@@ -61,4 +62,7 @@ def test_property_inference_attack():
 =======
     attack = PropertyInferenceAttack(target_model.to_art_classifier)
 >>>>>>> Fix merge issues and failing tests.
+=======
+    attack = PropertyInferenceAttack(target_model.to_art_classifier())
+>>>>>>> Fix of PIA test. #127
     attack.attack()
