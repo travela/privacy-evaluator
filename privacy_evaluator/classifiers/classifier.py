@@ -23,6 +23,12 @@ class Classifier:
         """
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        self.loss = loss
+        self.nb_classes = nb_classes
+        self.input_shape = input_shape
+>>>>>>> Rename Tensorflow to TensorFlow. #114
         self.art_classifier = self._to_art_classifier(
             classifier, loss, nb_classes, input_shape
 =======
